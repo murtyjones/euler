@@ -3,7 +3,16 @@
 #include <string>
 #include <vector>
 #include <string.h>
+#include <sstream>
 using namespace std;
+
+typedef std::vector<int>::iterator vec_iter;
+
+void doSomething(vec_iter first, vec_iter last) {
+    for (vec_iter cur = first; cur != last; ++cur) {
+       cout << *cur << endl;
+    }
+}
 
 int main()
 {
@@ -32,13 +41,19 @@ int main()
 
   int max = 0;
 
-  int foo[12];
-  for (int i = 0; i < numbas.length(); i++) {
-    int thist = stoll(numbas.substr(i, i+1));
-    cout << thist << endl;
-    // foo[i % 12] = thist;
-    //
-    // cout << foo[i % 12] << endl;
+
+
+  vector<int> foo();
+
+  for (int i = 0; i < numbas.length(); ++i) {
+    if (i < 12) {
+      //foo.push_back(numbas[i]);
+      continue;
+    }
+
+
+    doSomething(foo.begin()+0, foo.begin()+1);
+    // cout << foo;
 
   }
 
